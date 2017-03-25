@@ -1,0 +1,38 @@
+---
+Test
+---
+1、从使用上，ActionFixture主要用于测试一系列的事件流。
+2、从代码实现上，ActionFixture可以直接调用其他类的方法进行测试。
+!1 简单介绍一下table的设计要点
+1.首先要在 !Path中声明我们的Fixture的类路径，不要包括包在内
+2.先声明是Action Fixture 
+3.start表示要启动那个Fixture  
+4.Press是要invoke一个void，且不带参数的函数
+5.enter是要invoke一个带有参数的，void的函数
+6.check就是对于一个有返回值的函数进行期望值的比较
+!1 区别
+Actionfixture和其它的Fixtures的重要区别:  你自定义的Fixtures类不能继承ActionFixture类，而是直接继承fit.Fixture类，然后用“start”命令来执行它。
+
+ 
+|Action Fixture.|
+|start |fitnesse.fixtures.CountFixture|
+|check|counter|0|
+|press|count|
+|check|counter|1|
+|press|count|
+|check|counter|2|
+|press|count|
+|check|counter|3|
+|enter|counter|5|
+|press|count|
+|check|counter|6|
+
+!path fitnesse-test-demo\target\classes
+|Action Fixture.|
+|start |cn.slimsmart.fitnesse.test.demo.StudentActionFixture|
+|press|init|
+|enter|addStudent|5|
+|check|count|6|
+
+
+!|fit.SummaryFixture|

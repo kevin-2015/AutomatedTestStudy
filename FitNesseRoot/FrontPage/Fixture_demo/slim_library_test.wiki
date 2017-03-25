@@ -1,0 +1,24 @@
+---
+Test
+---
+#指定slim引擎
+!define TEST_SYSTEM {slim}
+
+!**> path
+#引入fitnesse jar包
+!path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar
+**!
+
+ #import类包
+!**> import
+|import             |
+|fitnesse.slim.test|
+**!
+
+|Library|
+|echo script|
+
+|script|my fixture|
+|check|do business logic|42|
+|note|The following invocation is triggered on the "echo script" library fixture|
+|echo|Hello world|

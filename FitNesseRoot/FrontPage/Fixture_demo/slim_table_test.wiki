@@ -1,0 +1,20 @@
+---
+Test
+---
+#指定slim引擎
+!define TEST_SYSTEM {slim}
+
+!**> path
+#引入fitnesse jar包
+!path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar
+**!
+
+#import类包
+!**> import
+|import             |
+|fitnesse.slim.test|
+**!
+
+!|Table:Bowling|
+|3|5|4|/|x||x||3|4|6|/|7|2|3|4|9|-|4|/|3|
+||8||28||51||68||75||92||101||108||117|||130|

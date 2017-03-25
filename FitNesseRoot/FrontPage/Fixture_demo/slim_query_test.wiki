@@ -1,0 +1,42 @@
+---
+Test
+---
+#指定slim引擎
+!define TEST_SYSTEM {slim}
+
+!**> path
+#引入fitnesse jar包
+!path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar
+#指定加载类文件
+!path fitnesse-test-demo\target\classes
+**!
+
+#import类包
+!**> import
+|import             |
+|cn.slimsmart.fitnesse.test.demo|
+**!
+!3 query 不匹配报错
+!|Query: employees hired before|10-Dec-1980|
+|company number|employee number|first name|last name|hire date|
+|4808147|9942|Bill|Mitchell|19-Dec-1966|
+|4808147|1429|Bob|Martin|10-Oct-1975|
+!3 默认填充
+!|Query: employees hired before|10-Dec-1980|
+|company number|employee number|first name|last name|hire date|
+|4808147|||||
+|5123122|||||
+
+!3 子集查询
+!|Subset Query: employees hired before|10-Dec-1980|
+|employee number|first name|last name|hire date|
+|1429|Bob|Martin|10-Oct-1975|
+|8832||||
+
+!3 ordered query table  安装第一列的顺序排列
+!|Ordered query: employees hired before|10-Dec-1980|
+|employee number|first name|last name|hire date|
+|8832||||
+|1429||||
+|9924||||
+

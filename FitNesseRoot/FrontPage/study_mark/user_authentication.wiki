@@ -1,0 +1,11 @@
+!1 Fitnesse用户登录认证配置
+
+1.在fitnesse的文件夹内，新建一个名为user.bat的批处理文件
+输入下列代码：
+java -cp fitnesse.jar fitnesse.authentication.Password -f passwords.txt -c fitnesse.authentication.HashingCipher %1
+（其中’-f passwords.txt’代表创建的用户名与密码存放在passwords.txt文件就夹内（如果不设-f，默认的文件为passwords.txt）；其后的’ -c fitnesse.authentication.HashingCipher’代表使用HashingCipher文件把密码加密，使即使得到password文件的人也无法轻易破解密码，当然用户如果忘记密码，恐怕也难以破解找回了吧；’%1’代表需要输入一个参数，这里需要输入的参数是设置的用户名）
+
+2.接下来我们要试着去调用第二步创建的user.bat文件以便我们创建新用户，有两种方式创建用户：
+第一种：开始->运行->输入cmd->弹出DOS界面->输入cd %（user.bat文件所在的路径）%（eg：user.bat在c:/fitnesse下，应输入cd c:/fitnesse）->回车(出现cd c:/fitnesse>)->输入user.bat %用户名% （eg：我们想创建一个名为fox的用户，应输入user.bat fox）->回车,将显示Be adviserd,the password will be visible as it is typed. enter password for %fox%: %输入你想设置的密码%->回车，confirm password: %重新输入刚才的密码,以便确认用户是否设置了所需的密码%->回车，if 两次输入不相同 then，提示passwords did not match 重新回到Be adviserd,the password will be visible as it is typed. enter password for %fox%: %输入你想设置的密码%的步骤；else 相同 then，提示password saved in %password.txt%(这是在fitnesse文件下，将产生一个password.txt文件，里面就保存了我们刚刚设置的用户名与密码
+
+再次编辑user.bat文件，把其中的%1替换成我们想设定的用户名（eg：Judy）->直接双击运行user.bat文件->弹出DOS界面,显示Be adviserd,the password will be visible as it is typed. enter password for %Judy%: %输入你想设置的密码%->回车，confirm password: %重新输入刚才的密码,以便确认用户是否设置了所需的密码%->回车，if 两次输入不相同 then，提示passwords did not match 重新回到Be adviserd,the password will be visible as it is typed. enter password for %Judy%: %输入你想设置的密码%的步骤；else 相同 then，提示password saved in %password.txt%->DOS界面自动销毁

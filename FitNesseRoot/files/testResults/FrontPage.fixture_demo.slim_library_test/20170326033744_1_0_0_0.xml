@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20161106</FitNesseVersion>
+  <rootPath>FrontPage.fixture_demo.slim_library_test</rootPath>
+    <result>
+    <counts>
+      <right>1</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2017-03-26T03:37:44+08:00</date>
+    <runTimeInMillis>103</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;path&lt;/p&gt;
+	&lt;div&gt;&lt;span class="meta"&gt;classpath: FitNesseRoot/fitnesseJar/fitnesse-20161106.jar&lt;/span&gt;&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt; #import类包&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;import&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.slim.test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Library&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;echo script&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;my fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;do business logic&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;42&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td colspan="2"&gt;The following invocation is triggered on the "echo script" library fixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;echo&lt;/td&gt;
+		&lt;td colspan="2"&gt;Hello world&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>slim_library_test</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='fitnesse.slim.test'}</instruction>
+        <slimResult>pass(fitnesse.slim.test)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>fitnesse.slim.test</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='library_1_0', instruction='make', instanceName='library1', className='EchoScript', args=[]}</instruction>
+        <slimResult>pass(echo script)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>library_1_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>echo script</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_0', instruction='make', instanceName='scriptTableActor', className='MyFixture', args=[]}</instruction>
+        <slimResult>pass(my fixture)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_0</instructionId>
+                    <col>1</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>my fixture</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_1', instruction='call', instanceName='scriptTableActor', methodName='doBusinessLogic', args=[]}</instruction>
+        <slimResult>pass(42)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_1</instructionId>
+                    <col>2</col>
+                              <row>1</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>42</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_2', instruction='call', instanceName='scriptTableActor', methodName='echo', args=[Hello world]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>scriptTable_2_2</instructionId>
+                    <col>0</col>
+                              <row>3</row>
+                    <type>ScriptActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>"D:\Program Files\jdk1.7.0_67\bin\java" -cp C:\Users\Administrator\Desktop\fitnesse_demo\fitnesse-standalone.jar;FitNesseRoot/fitnesseJar/fitnesse-20161106.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>377</totalRunTimeInMillis>
+</testResults>
+

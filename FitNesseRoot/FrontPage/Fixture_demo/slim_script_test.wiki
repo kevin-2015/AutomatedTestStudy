@@ -1,0 +1,28 @@
+---
+Test
+---
+!3 说明见 [[!-ScriptTable-!][.FitNesse.FullReferenceGuide.UserGuide.WritingAcceptanceTests.SliM.ScriptTable]]
+
+#指定slim引擎
+!define TEST_SYSTEM {slim}
+
+!**> path
+#引入fitnesse jar包
+!path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar
+#指定加载类文件
+!path fitnesse-test-demo\target\classes
+**!
+
+#import类包
+!**> import
+|import             |
+|cn.slimsmart.fitnesse.test.demo|
+**!
+
+!**> define variable
+#定义变量
+!define name !-word-!
+**!
+
+!|script|hello word           |
+|check |say;|${name}|hello word    |

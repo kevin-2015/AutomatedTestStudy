@@ -1,0 +1,13 @@
+---
+Suite
+---
+Fitnesse中有多种针对不同测试类型的用例表。
+!4 针对不同的引擎实现了不同Fixture
+'''fit引擎'''
+最常用的有ColumnFixture、RowFixture和ActionFixture；比较少用到的有RowEntryFixture、TableFixture等。
+每个表格，都会由程序员所编写的"fixture"来解释，Fixture：它会驱动实际的产品软件来对表格中给出的测试用例进行检验。
+!img https://raw.githubusercontent.com/slimina/fitnesse_demo/master/images/4.png
+'''slim引擎'''
+!img https://raw.githubusercontent.com/slimina/fitnesse_demo/master/images/3.png
+
+!contents -R2 -g -p -f -h

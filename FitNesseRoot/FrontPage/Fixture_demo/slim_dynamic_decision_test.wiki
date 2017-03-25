@@ -1,0 +1,26 @@
+---
+Test
+---
+表格计算
+
+#指定slim引擎
+!define TEST_SYSTEM {slim}
+
+!**> path
+#引入fitnesse jar包
+!path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar
+#指定加载类文件
+!path fitnesse-test-demo\target\classes
+**!
+
+#import类包
+!**> import
+|import             |
+|cn.slimsmart.fitnesse.test.demo|
+**!
+
+!|ddt: add up change|
+|1c |5c|10c|25c|50c|$1|total cents?|$ total?|
+|2|2|4|0|0|0|52|0.52|
+|56|0|0|0|1|20|$totalCents=|21.06|
+|$totalCents|0|0|0|0|10|3106|~=31.1|

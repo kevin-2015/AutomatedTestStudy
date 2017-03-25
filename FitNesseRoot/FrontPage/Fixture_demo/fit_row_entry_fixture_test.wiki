@@ -1,0 +1,13 @@
+---
+Test
+---
+!3 主要用于添加数据库或调用方法时参数检查
+
+!path fitnesse-test-demo\target\classes
+
+!|cn.slimsmart.fitnesse.test.demo.UserRowEntryFixture|
+|age|
+|23|
+|99|
+|16|
+|37|

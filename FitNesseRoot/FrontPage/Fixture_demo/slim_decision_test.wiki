@@ -1,0 +1,24 @@
+---
+Test
+---
+#指定slim引擎
+!define TEST_SYSTEM {slim}
+
+!**> path
+#引入fitnesse jar包
+!path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar
+#指定加载类文件
+!path fitnesse-test-demo\target\classes
+**!
+
+#import类包
+!**> import
+|import             |
+|cn.slimsmart.fitnesse.test.demo|
+**!
+
+!|AddCalculator|
+|a |b|add?|
+|1|2|3|
+|20|50|70|
+|34|46|80|

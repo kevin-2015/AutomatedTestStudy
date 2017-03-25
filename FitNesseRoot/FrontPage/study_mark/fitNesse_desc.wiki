@@ -1,0 +1,10 @@
+Fitnesse是一款开源的验收测试框架，完全有java语言编写完成，支持多语言软件产品的测试，包括（java,c,c++,python,php）等等
+在fitnesse框架中，总共包括三个部分，wiki，test system，fixtures.其中wiki部分将展现具体的test case以及test suite，test system包括两部分slim,fit,也就是fitnesse的执行引擎,fixtures也就是真正的测试代码。默认是fit引擎，如果使用slim引擎需要指明!define TEST_SYSTEM {slim}
+
+!img https://raw.githubusercontent.com/slimina/fitnesse_demo/master/images/1.jpg
+
+从上图大家可以看到，在wiki pages上描述的将是关于业务或者其他逻辑的测试用例，fitnesse将会根据你所选择的test runners(slim或者fit)来解析wiki pages所传送过来的test cases, 假如我们选择了slim作为我们的test runner,那么解下去，slim 将会把网络传输过来的wiki 脚本解析为一系列的指令，然后slim 执行器将会根据这些指令来调用我们所编写的测试代码也就是fixtures，fixtures可以是java 测试代码，c测试代码或者其他语言编写的测试代码，这些测试代码将会根据你所调用的被测对象来执行你的测试用例。同理当你选择fit作为你的Test runner的话过程也是一样，只是fit在解析wiki脚本的时候与slim不一样，fit会将wiki page作为html页面，然后通过解析html页面来调用后台的测试代码来执行测试用例，相对于slim性能上较差，fit是比较老的测试引擎，再此我推荐大家使用slim,因为slim会更加的轻量和高效
+fitnesse最大的优点是完全将业务逻辑（测试用例）和测试代码进行分离，功能测试人员负责在wiki上编写测试用例，测试开发工程师负责编写测试代码，这不但利用测试用例和测试代码的维护和管理，也促进了测试人员和开发人之间的沟通，使整个软件开发和测试变得更加敏捷（后面的文章将介绍fitnesse在敏捷测试中的使用），先对于junit每写一个test case都要增加一定量的测试代码，fitnesse大大降低了冗余的测试代码，因为fitnesse可以进行参数化，相对于testng的xml参数化，fitnesse的参数更加的人性且便于操作（后续文章将推出fitnesse wiki语法）。这一系列优点使fitnesse可以适用与各个级别的测试，可以在单元测试，集成测试，验收测试中使用，也可以用于白盒测试和灰盒测试。
+
+!5 注：fit和slim对语言的支持
+!img https://raw.githubusercontent.com/slimina/fitnesse_demo/master/images/2.png

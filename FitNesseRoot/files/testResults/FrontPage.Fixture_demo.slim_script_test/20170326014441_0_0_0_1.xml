@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20161106</FitNesseVersion>
+  <rootPath>FrontPage.fixture_demo.slim_script_test</rootPath>
+    <result>
+    <counts>
+      <right>1</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>3</exceptions>
+    </counts>
+    <date>2017-03-26T01:44:42+08:00</date>
+    <runTimeInMillis>139</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;path&lt;/p&gt;
+	&lt;div&gt;&lt;span class="meta"&gt;classpath: FitNesseRoot/fitnesseJar/fitnesse-20161106.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: fitnesse-test-demo\target\classes&lt;/span&gt;&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;import&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;cn.slimsmart.fitnesse.test.demo&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;define variable&lt;/p&gt;
+	&lt;div&gt;&lt;span class="meta"&gt;variable defined: name=word&lt;/span&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;hello word&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;say;&lt;/td&gt;
+		&lt;td&gt;word&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;hello word&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="4"&gt;script. &lt;span class="error"&gt;Could not invoke constructor for Script[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;start&lt;/td&gt;
+		&lt;td colspan="3"&gt;HelloWord&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;check &lt;span class="error"&gt;The instance decisionTable_2.setStart. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;say; &lt;span class="error"&gt;The instance decisionTable_2.setHelloWord. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;word&lt;/td&gt;
+		&lt;td&gt;hello word&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>slim_script_test</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='cn.slimsmart.fitnesse.test.demo'}</instruction>
+        <slimResult>pass(cn.slimsmart.fitnesse.test.demo)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>cn.slimsmart.fitnesse.test.demo</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_1_0', instruction='make', instanceName='scriptTableActor', className='HelloWord', args=[]}</instruction>
+        <slimResult>pass(hello word)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_1_0</instructionId>
+                    <col>1</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>hello word</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_1_1', instruction='call', instanceName='scriptTableActor', methodName='say', args=[word]}</instruction>
+        <slimResult>pass(hello word)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_1_1</instructionId>
+                    <col>3</col>
+                              <row>1</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>hello word</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_0', instruction='make', instanceName='decisionTable_2', className='Script', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_2_0</instructionId>
+                              <type>ConstructionExpectation</type>
+                                        <evaluationMessage>Could not invoke constructor for Script[0]</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_4', instruction='call', instanceName='decisionTable_2', methodName='setStart', args=[check]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_2_4</instructionId>
+                              <type>VoidReturnExpectation</type>
+                                        <evaluationMessage>The instance decisionTable_2.setStart. does not exist</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_2_5', instruction='call', instanceName='decisionTable_2', methodName='setHelloWord', args=[say;]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_2_5</instructionId>
+                              <type>VoidReturnExpectation</type>
+                                        <evaluationMessage>The instance decisionTable_2.setHelloWord. does not exist</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>"D:\Program Files\jdk1.7.0_67\bin\java" -cp C:\Users\Administrator\Desktop\fitnesse_demo\fitnesse-standalone.jar;FitNesseRoot/fitnesseJar/fitnesse-20161106.jar;fitnesse-test-demo\target\classes fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>407</totalRunTimeInMillis>
+</testResults>
+

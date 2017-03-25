@@ -1,0 +1,19 @@
+---
+Help: fit_column_fixture_test
+Test
+---
+!1 columnfixture
+columnFixture是用于测试需要成排的输入和输出的验证测试
+第一行中的内容对应Fixture实现的类名。
+第二行中的内容对应于要触发的Fixture类中的实例变量和要调用并验证其结果的方法。
+(FIT会根据表格中的内容，找到相应的Fixture类，实例化出Fixture对象实例，根据表格中提供的内容设置相应的实例变量的值，然后调用表格中给出的方法，并就方法的返回值和表格中提供的值进行对比，然后报告结果。)
+
+
+|eg.Division|               
+|numerator|denominator|quotient?|
+|10       |2          |5        |
+|12.6     |3          |4.2      | 
+|100      |4          |33       | 
+
+
+!|fit.SummaryFixture|
