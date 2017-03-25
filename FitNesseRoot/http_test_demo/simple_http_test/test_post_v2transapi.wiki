@@ -1,0 +1,25 @@
+---
+Test
+---
+!define TEST_SYSTEM {slim}
+!**> path
+!path FitNesseRoot/fitnesseJar/*.jar
+**!
+
+!**> import
+|import             |
+|cn.slimsmart.fitnesse.feature.http|
+**!
+
+!**> define variable
+#定义变量
+#url：请求地址
+#params：请求参数
+!define url {!-https://fanyi.baidu.com/v2transapi-!}
+!define params !-!{from:zh,to:en,query:你好,transtype:translang,simple_means_flag:3}-!
+**!
+#使用HttpClient
+|Script|http client                                  |
+|show  |post;                |${url}|${params}        |
+|check |post response code;|${url}|${params}|200    |
+|check |post;|${url}|${params}|=~/hello/|
