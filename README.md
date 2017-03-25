@@ -9,3 +9,5 @@
 window 运行startFitnesse.bat即可，linux运行startFitnesse脚本
 
 **3. 实例样图**
+
+![主页](images/page1.png)
