@@ -6,4 +6,6 @@ Suites: wiki
 
 1.[[!-FitNesse介绍-!][.FrontPage.study_mark.fitNesse_desc]]
 
-2.[[用户登录认证][.FrontPage.study_mark.user_authentication]]
+2.[[!-wiki标记语言-!][.FrontPage.study_mark.wiki_markup_language]]
+
+3.[[用户登录认证][.FrontPage.study_mark.user_authentication]]

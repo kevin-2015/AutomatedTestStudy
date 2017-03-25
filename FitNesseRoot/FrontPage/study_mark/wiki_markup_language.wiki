@@ -1,0 +1,266 @@
+!anchor 顶部
+|!5 '''wiki标记语言'''|
+|'''标记'''|'''说明'''|'''例子'''|'''显示'''|
+|斜体|使用2个单引号|!-这是''斜体''字-!|这是''斜体''字|
+|粗体|使用3个单引号|!-这是'''粗体'''字-!|这是'''粗体'''字|
+|删除线|开始结束使用2个短划线|!-这是--删除线--文字-!|这是--删除线--文字|
+|样式|错误|!-!style_error(an error)-!|!style_error(an error)|
+||成功|!-!style_pass(pass)-!|!style_pass(pass)|
+||失败|!-!style_fail(fail)-!|!style_fail(fail)|
+||忽略|!-!style_ignore(ignore)-!|!style_ignore(ignore)|
+||Caps|!-!style_caps{Caps}-!|!style_caps{Caps}|
+||code|!-!style_code[code]-!|!style_code[code]|
+||颜色|!-!style_red[red]-!|!style_red[red] and other colors...(red, orange, yellow, green, blue, indigo, violet, pink, lightYellow, lightGreen, lightBlue, chocolate, darkOrange, darkRed, olive, darkBlue, darkGreen)|
+|||!-!style_code(!style_red[code red])-!|!style_code(!style_red[code red])|
+||note|!-!style_note[note]-!|!style_note[note]|
+||right|!-!style_right[right]-!|!style_right[right]|
+||strike|!-!style_strike[strike]-!|!style_strike[strike]|
+||meta|!-!style_meta[meta]-!|!style_meta[meta]|
+||included|!-!style_included[included]-!|!style_included[included]|
+||setup|!-!style_setup[setup]-!|!style_setup[setup]|
+||collapse_rim|!-!style_collapse_rim[collapse_rim]-!|!style_collapse_rim[collapse_rim]|
+||pageHelp|!-!style_pageHelp[pageHelp]-!|!style_pageHelp[pageHelp]|
+||hidden|!-x !style_hidden[hidden] x-!|x !style_hidden[hidden] x|
+||test_output_name|!-!style_test_output_name[test_output_name]-!|!style_test_output_name[test_output_name]|
+||fit_label|!-!style_fit_label[fit_label]-!|!style_fit_label[fit_label]|
+||fit_stacktrace|!-!style_fit_stacktrace[fit_stacktrace]-!|!style_fit_stacktrace[fit_stacktrace]|
+||fit_grey|!-!style_fit_grey[fit_grey]-!|!style_fit_grey[fit_grey]|
+|标记交叉引用|page path|!-!see .FrontPage-!|!see .FrontPage|
+|标题|!加数字|!-2号标题-!|!2 标题|
+|居中|使用!-!c-!|!-!c 居中-!|!c 居中|
+|note|使用!-!note-!开头|!-!note this text is a note.-!|!note this text is a note.|
+|水平规则|使用四个或更多破折号绘制水平规则。 越多的破折号越粗|!-上-----下-!|上-----下|
+|图片|直接使用链接或者使用!img,!img-l左对齐，!img-r右对齐，-w图片大小 -b边框，-m外边距|!-!img -w 200 -b 2 -m 50 https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png -!|!img -w 200 -b 2 -m 50 https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png|
+|外部链接|直接复制链接|!-https://www.baidu.com/-!|https://www.baidu.com/|
+|锚点|使用!anchor创建锚点 !-.#引用-!|!-.#顶部-!|.#顶部|
+|内部链接|安装首字母大写命名单词(没有创建，有即编辑),!-[[显示文本][链接地址]]-!|!-[[首页][.FrontPage]]-!|[[首页][.FrontPage]]|
+|别名链接|!-[[显示文本][链接地址]]-!|!-[[首页][.FrontPage]]-!|[[首页][.FrontPage]]|
+|列表|使用*无序，数字开头有序，超过数据9都使用1表示|参考.#列表|
+|注释|使用#开头|!-# 注释-!|#注释|
+|转义文本|使用!和-组合，但会解析html标签|!-!-FrontPage-!-!|!-FrontPage-!|
+|预格式化|使用3对大括号包住|!-{{{.FrontPage}}}-!|{{{.FrontPage}}}|
+|定义变量|使用!-!define-!定义，!-${}-!取值,支持直接赋值，变量引用，表达式|参考.#变量定义|
+|引入classpath|使用!-!path-!|!-!path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar-!||!path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar|
+|表格|使用!-|-!分割，可以在表格中使用其他标记，如果不需要解释任何标记指令在row前加!-!-!,使用-隐藏一行|参考.#表格|
+|hash表格|使用json格式展示hash表|!-!{name:tom,age:34}-!|!{name:tom,age:34}|
+|plainText表|使用!-![..]!-!包裹|参考.#plainText表|
+|可折叠|使用!-!*** ... ***!-!,加上>关闭，<打开|!-!***>  多行 ***!-!||
+|目录|参考: [[Table of Contents][.FitNesse.UserGuide.FitNesseWiki.MarkupLanguageReference.MarkupContents]]|
+|包含|使用!-!include-!,-seamless 不包含封闭框,-c 被折叠 这两个参数不能同时使用,[[参考][.FitNesse.UserGuide.FitNesseWiki.MarkupLanguageReference.MarkupPageInclude]] |!include -seamless .FrontPage|
+|help|使用!-!help-!,-editable可编辑|!help -editable .FitNesse.UserGuide.FitNesseWiki.MarkupLanguageReference.MarkupHelp|
+|今天日期|!-!today-!|!today|格式参考：.#tody|
+|显示上次修改时间|!-!lastmodified-!|!lastmodified|
+
+
+
+
+!anchor 列表
+!*****> 列表
+{{{
+ * Item one
+  * sub item one
+  * sub item two
+
+ * Item two.
+  1 sub item 2
+  2 sub item 3
+   * sub sub item one
+    1 sub sub sub item one.
+}}}
+==>
+ * Item one
+  * sub item one
+  * sub item two
+
+ * Item two.
+  1 sub item 2
+  2 sub item 3
+   * sub sub item one
+    1 sub sub sub item one.
+{{{
+ 1 item one
+ 2 item two
+ 3 item three
+ 4 item four
+ 5 item five
+ 6 item six
+ 7 item seven
+ 8 item eight
+ 9 item nine
+ 1 item ten
+ 1 item eleven
+}}}
+==>
+ 1 item one
+ 2 item two
+ 3 item three
+ 4 item four
+ 5 item five
+ 6 item six
+ 7 item seven
+ 8 item eight
+ 9 item nine
+ 1 item ten
+ 1 item eleven
+
+******!
+!anchor 变量定义
+!***> 变量定义
+!define num {123}
+!define num1 num
+!define exp {${= 10 / 2 =}} 
+!define myVariable {
+This is the
+text of my
+variable
+}
+!define markedUp {This is '''bold'''}
+
+
+mun=${num}
+mun1=${num1}
+exp=${exp}
+myVariable=${myVariable}
+markedUp=${markedUp}
+
+表达式使用参考[[!-MarkupExpressions-!][.FitNesse.UserGuide.FitNesseWiki.MarkupLanguageReference.MarkupExpressions]]
+***!
+!anchor 表格
+!***> 表格
+{{{
+|Alpha|
+|Beta|gamma|Delta|
+|1|2|3|
+}}}
+=>
+|Alpha|
+|Beta|gamma|Delta|
+|1|2|3|
+
+{{{
+!|ThisTableWillNotInterpret|!c any directives|'''it is treated'''|
+|!1 like a literal|--and is especially useful--|''for test tables.''|
+|^SinceTheyTend| * to have WikiWord symbols in them.|
+}}}
+=>
+!|ThisTableWillNotInterpret|!c any directives|'''it is treated'''|
+|!1 like a literal|--and is especially useful--|''for test tables.''|
+|^SinceTheyTend| * to have WikiWord symbols in them.|
+
+{{{
+!|Comment|
+|Beta|gamma|Delta|
+|1|2|3|
+}}}
+=>
+!|Comment|
+|Beta|gamma|Delta|
+|1|2|3|
+
+{{{
+!|Comment|
+-!|Beta|gamma|Delta|
+|1|2|3|
+}}}
+!|Comment|
+-!|Beta|gamma|Delta|
+|1|2|3|
+=>
+
+表格嵌套
+{{{
+|this|table|
+|has| !(|a|nested|table|)! |
+}}}
+=>
+|this|table|
+|has| !(|a|nested|table|)! |
+
+{{{
+|this|table|
+|has| |a|nested|table| |
+}}}
+=>
+|this|table|
+|has| |a|nested|table| |
+***!
+
+!anchor plainText表
+!***> plainText表
+空格分割
+{{{
+![
+simple plain
+text pasted
+from somewhere
+]!
+}}}
+=>
+![
+simple plain
+text pasted
+from somewhere
+]!
+
+指定分隔符
+{{{
+![:
+Name:Bob
+Address:Here
+Street:Cranbrook:Zip:60048
+]!
+}}}
+=>
+![:
+Name:Bob
+Address:Here
+Street:Cranbrook:Zip:60048
+]!
+
+隐藏第一行
+{{{
+![: Location
+Name:Bob
+Address:Here
+Street:Cranbrook:Zip:60048
+]!
+}}}
+=>
+![: Location
+Name:Bob
+Address:Here
+Street:Cranbrook:Zip:60048
+]!
+
+{{{
+![ BDD:JukeBoxDriver
+Given a jukebox with price set to $1.00
+When a customer deposits $2.00
+And presses B5
+And presses C21
+Then Stairway to Heaven will play.
+And Comforably Numb will play.
+]!
+}}}
+=>
+![ BDD:JukeBoxDriver
+Given a jukebox with price set to $1.00
+When a customer deposits $2.00
+And presses B5
+And presses C21
+Then Stairway to Heaven will play.
+And Comforably Numb will play.
+]!
+
+***!
+
+!anchor tody
+!***> tody
+
+|!-Today is !today.-!|Today is !today.|
+|!-XML is !today -xml.-!|XML is !today -xml.|
+|!-Right now it is !today -t.-!|Right now it is !today -t.|
+|!-Tomorrow is !today +1.-!|Tomorrow is !today +1.|
+|!-Last week was !today -7.-!|Last week was !today -7.|
+|!-The month is !today (MMM).-!|The month is !today (MMM).|
+***!
