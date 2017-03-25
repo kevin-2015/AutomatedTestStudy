@@ -6,4 +6,4 @@ if [ "$JAVA_HOME" != "" ]; then
    java_cmd=$JAVA_HOME/bin/java
 fi
 
-nohup $java_cmd -jar fitnesse-20161130-standalone.jar -p 7000 >/dev/null 2>&1 &
+nohup $java_cmd -jar fitnesse-standalone.jar -p 7000 >/dev/null 2>&1 &

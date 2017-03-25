@@ -1,1 +1,1 @@
-java -jar fitnesse-20161130-standalone.jar -p 7000
+java -jar fitnesse-standalone.jar -p 7000
