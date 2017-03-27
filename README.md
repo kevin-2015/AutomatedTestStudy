@@ -7,6 +7,10 @@
 
 > 仓库地址：http://repo1.maven.org/maven2/org/fitnesse/fitnesse/
 
+> eclipse插件：http://fitnesse-eclipse.github.io/
+
+> jenkins插件：https://wiki.jenkins-ci.org/display/JENKINS/Fitnesse+Plugin
+
 **1. fitnesse-feature**
 
 基于okhttp开发的fitnesse的feature，用于http api测试。已经打包统一放在FitNesseRoot/fitnesseJar/下，便于测试用例引用
