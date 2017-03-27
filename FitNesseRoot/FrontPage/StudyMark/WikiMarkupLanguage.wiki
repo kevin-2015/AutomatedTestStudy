@@ -30,7 +30,7 @@
 |居中|使用!-!c-!|!-!c 居中-!|!c 居中|
 |note|使用!-!note-!开头|!-!note this text is a note.-!|!note this text is a note.|
 |水平规则|使用四个或更多破折号绘制水平规则。 越多的破折号越粗|!-上-----下-!|上-----下|
-|图片|直接使用链接或者使用!img,!img-l左对齐，!img-r右对齐，-w图片大小 -b边框，-m外边距|!-!img -w 200 -b 2 -m 50 https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png -!|!img -w 200 -b 2 -m 50 https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png|
+|图片|直接使用链接或者使用!img,!img-l左对齐，!img-r右对齐，-w图片大小 -b边框，-m外边距|!-!img -w 200 -b 2 -m 50 https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png -!|!img https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png|
 |外部链接|直接复制链接|!-https://www.baidu.com/-!|https://www.baidu.com/|
 |锚点|使用!anchor创建锚点 !-.#引用-!|!-.#顶部-!|.#顶部|
 |内部链接|安装首字母大写命名单词(没有创建，有即编辑),!-[[显示文本][链接地址]]-!|!-[[首页][.FrontPage]]-!|[[首页][.FrontPage]]|

@@ -1,6 +1,3 @@
----
-Test
----
 !define TEST_SYSTEM {slim}
 !**> path
 !path FitNesseRoot/fitnesseJar/*.jar

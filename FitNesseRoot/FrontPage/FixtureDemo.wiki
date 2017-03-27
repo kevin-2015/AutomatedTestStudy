@@ -1,7 +1,7 @@
 ---
 Suite
 ---
-Fitnesse中有多种针对不同测试类型的用例表。
+Fitnesse中有多种针对不同测试类型的用例表。suite和test命名采用驼峰命名，和Java类一样
 !4 针对不同的引擎实现了不同Fixture
 '''fit引擎'''
 最常用的有ColumnFixture、RowFixture和ActionFixture；比较少用到的有RowEntryFixture、TableFixture等。

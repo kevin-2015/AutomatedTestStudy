@@ -2,11 +2,11 @@
 !3 ''一个开源完全集成的独立验收测试框架和WIKI。''
 # Here is a good place to add your first page (WikiWord). For example, MyTopLevelApplicationPage
 
-[[!-http测试实例 -!][.http_test_demo]]
+[[!-http测试实例 -!][.HttpTestDemo]]
 
-[[!-Fixture学习 -!][FrontPage.fixture_demo]]
+[[!-Fixture学习 -!][FrontPage.FixtureDemo]]
 
-[[!-学习笔记 -!][FrontPage.study_mark]]
+[[!-学习笔记 -!][FrontPage.StudyMark]]
 
 
 点击 [[Edit][.FrontPage?edit]]按钮增加你的第一个 "page"， 点击 [[!-WikiWord-!][.FitNesse.UserGuide.FitNesseWiki.WikiWord]] 编写wiki
