@@ -1,10 +1,11 @@
-
 !1 文章链接
 
 1.[[!-FitNesse介绍-!][.FrontPage.StudyMark.FitNesseDesc]]
 
 2.[[!-wiki标记语言-!][.FrontPage.StudyMark.WikiMarkupLanguage]]
 
-3.[[用户登录认证][.FrontPage.StudyMark.UserAuthentication]]
+3.[[内置Fixture介绍][.FrontPage.StudyMark.FixtureDesc]]
 
-4.[[集成Jenkins][.FrontPage.StudyMark.IntegratedJenkins]]
+4.[[用户登录认证][.FrontPage.StudyMark.UserAuthentication]]
+
+5.[[集成Jenkins][.FrontPage.StudyMark.IntegratedJenkins]]

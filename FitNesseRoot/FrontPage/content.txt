@@ -2,9 +2,9 @@
 !3 ''一个开源完全集成的独立验收测试框架和WIKI。''
 # Here is a good place to add your first page (WikiWord). For example, MyTopLevelApplicationPage
 
-[[!-http测试实例 -!][.HttpTestDemo]]
+[[!-自定义Fixture实例-!][FrontPage.CustomFixtures]]
 
-[[!-Fixture学习 -!][FrontPage.FixtureDemo]]
+[[!-Fixture学习实例-!][FrontPage.FixtureStudy]]
 
 [[!-学习笔记 -!][FrontPage.StudyMark]]
 
