@@ -1,6 +1,4 @@
----
-Suite
----
+
 Fitnesse中有多种针对不同测试类型的用例表。suite和test命名采用驼峰命名，和Java类一样
 !4 针对不同的引擎实现了不同Fixture
 '''fit引擎'''

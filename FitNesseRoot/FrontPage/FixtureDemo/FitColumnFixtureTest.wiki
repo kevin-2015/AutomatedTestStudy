@@ -1,6 +1,3 @@
----
-Help: fit_column_fixture_test
----
 !1 columnfixture
 columnFixture是用于测试需要成排的输入和输出的验证测试
 第一行中的内容对应Fixture实现的类名。

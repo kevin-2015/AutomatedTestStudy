@@ -1,0 +1,19 @@
+通过集成Jenkins定时自动化完成测试，并保持执行结果。可以考虑在上线前和开发完交付测试前通过自动化完成一遍验证。
+
+!4 1.Jenkins安装fitnesse插件
+!img -w 600 https://raw.githubusercontent.com/slimina/fitnesse_demo/master/images/5.jpg
+搜索到插件直接安装，重启就行.
+
+!4 2.新建Jenkins服务
+配置Jenkins服务有2中方式，一种在其他机器已经安装好fitnesse，只是通过fitnesse进行执行自动化测试。
+!img -w 600 https://raw.githubusercontent.com/slimina/fitnesse_demo/master/images/6.jpg
+配置完即可。
+另一种是通过Jenkins自动从git或者svn拉最新的测试用例，自动启动fitnesse，运行测试用例
+'''配置git仓库'''
+!img -w 600 https://raw.githubusercontent.com/slimina/fitnesse_demo/master/images/7.jpg
+'''配置fitnesse启动'''
+!img -w 600 https://raw.githubusercontent.com/slimina/fitnesse_demo/master/images/8.jpg
+配置完保存
+
+!4 3.通过构建，完成自动化测试，查看结果
+!img -w 600 https://raw.githubusercontent.com/slimina/fitnesse_demo/master/images/10.jpg

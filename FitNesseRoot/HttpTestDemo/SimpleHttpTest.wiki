@@ -1,6 +1,1 @@
----
-Help: SimpleHttpTest
-Suite
-Test: no
----
 !contents -R2 -g -p -f -h
