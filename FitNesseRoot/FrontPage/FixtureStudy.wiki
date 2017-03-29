@@ -1,5 +1,2 @@
----
-Suite
----
-!1 Test suite X
+!4 学习!-FitNesse-!内置基于fit和slim引擎的Fixture
 !contents -R2 -g -p -f -h

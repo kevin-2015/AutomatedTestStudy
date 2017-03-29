@@ -1,5 +1,2 @@
----
-Suite
----
-!1 Test suite X
+!4 自定义Fixture测试用例
 !contents -R2 -g -p -f -h
