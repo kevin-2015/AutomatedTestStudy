@@ -23,3 +23,66 @@
 
 !|script|hello word           |
 |check |say;|${name}|hello word    |
+{{{
+!3 Script Table
+在表中每一行代表一个执行脚本
+第一行中的Script关键字表明表格类型，后面紧跟着类名（Fixture）和构造函数中的参数。在一个测试页中如果没有再指定其它Fixture，将一直沿用上一个Fixture。
+'''（1）Fixture调用方法'''
+|!-script-!|login dialog driver|Bob|xyzzy|
+或者
+|!-Script:login dialog driver-!|Bob|xyzzy|
+'''（2）函数调用'''
+函数调用有两种方法
+1. Interposing Function Call (Default) 插入函数调用（默认）
+|!-login with username-!|Bob|and password|xyzzy|  
+2. Sequential Argument Processing Function Call顺序参数处理函数调用
+|!-login with username and password;-!|Bob|xyzzy|
+注意：这种方式需要在函数名后追加一个“;”
+'''（3）行操作和显示'''
+1. 如果一个行中只单独存在一个函数，如果这个函数返回值是布尔值，那么该行将变成红色（false）或者绿色（true），其他的保持本色。
+2. 关键字：
+|第一个行单元格|类型||
+|check|返回匹配情况|	后面紧跟着一个函数，行最后一个单元格将被作为预期值，与函数的返回值进行匹配，匹配为true，不匹配为false|
+|check out|返回不匹配情况|后面紧跟着一个函数，行最后一个单元格将被作为非预期值，与函数的返回值进行匹配，匹配为false，不匹配为true（与check相反）|
+|ensure|布尔值|后面紧跟着一个函数，这个函数必须返回一个布尔值。如果是false，行为红色，如果是true，行为绿色。|
+|reject|（非）布尔值|后面紧跟着一个函数，这个函数必须返回一个布尔值。如果是false，行为绿色，如果是true，行为红色。（和正常的显示相反）|
+|note/blank/以#和*开头的单词|忽略|表示忽略该行|
+|show|展示|	后面紧跟着一个函数，在函数被执行后，该行的最后面将被增加一个单元格，用于展示函数的返回值|
+|Symbol(标识符|变量|	和$符连用，它将存储后面函数的返回值|
+|start|新建|后面紧跟着另一个Fixture以及构造函数参数，它将代替前面的Fixture，下面的行将使用新的Fixture。|
+}}}
+
+|script|login dialog driver|Bob|xyzzy|
+|login with username|Bob|and password|xyzzy|
+|check|login message|Bob logged in.|
+|reject|login with username|Bob|and password|bad password|
+|check|	login message|Bob not logged in.|
+|check not|login message|Bob logged in.|
+|ensure|login with username|Bob|and password|xyzzy|
+|note|this is a comment|
+|show|number of login attempts|
+|$symbol=|login message|
+
+{{{
+表格说明：
+
+第一行：创建LoginDialogDriver对象
+
+第二行：调用loginWithUsernameAndPassword方法
+
+第三行：调用loginMessage方法，对比当前的登录信息是否是Bob logged in
+
+第四行：调用loginWithUsernameAndPassword方法，使用的是错误的密码
+
+第五行：调用loginMessage方法，对比当前的登录信息是否是Bob not logged in
+
+第六行：调用loginMessage方法，对比当前的登录信息是否不是Bob logged in
+
+第七行：调用loginWithUsernameAndPassword方法，判断返回值
+
+第八行：忽略该行
+
+第九行：调用numberOfLoginAttempts，并在该行的最后面将被增加一个单元格，展示返回值。
+
+第十行：调用loginMessage方法，并将登录信息保存到变量symbol中
+}}}

@@ -1,0 +1,9 @@
+1.新建一个SuitePage，命名为TemplateLibrary
+2.然后如下图，添加作为template的TestPage，如下面的Get
+http://images2015.cnblogs.com/blog/950020/201610/950020-20161009152712615-1583824345.png
+3.在Get page中添加template内容，如下图
+http://images2015.cnblogs.com/blog/950020/201610/950020-20161009152810994-93876601.png
+4.新建一个page，在如图下拉框中选择PhInterfaceTest._.Get
+http://images2015.cnblogs.com/blog/950020/201610/950020-20161009152840215-822517878.png
+5.点击Insert Template，插入template
+http://images2015.cnblogs.com/blog/950020/201610/950020-20161009152915327-125527641.png

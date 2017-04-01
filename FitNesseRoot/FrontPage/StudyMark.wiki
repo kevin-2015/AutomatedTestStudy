@@ -6,8 +6,14 @@
 
 3.[[内置Fixture介绍][.FrontPage.StudyMark.FixtureDesc]]
 
-4.[[wiki默认规则][.FrontPage.StudyMark.DefaultRule]]
+4.[[模板的使用][.FrontPage.StudyMark.TemplateLibrary]]
 
-5.[[用户登录认证][.FrontPage.StudyMark.UserAuthentication]]
+5.[[wiki默认规则][.FrontPage.StudyMark.DefaultRule]]
 
-6.[[集成Jenkins][.FrontPage.StudyMark.IntegratedJenkins]]
+6.[[用户登录认证][.FrontPage.StudyMark.UserAuthentication]]
+
+7.[[集成Jenkins][.FrontPage.StudyMark.IntegratedJenkins]]
+
+8.[[Fixture调试][.FrontPage.StudyMark.FitnesseDebug]]
+
+9.[[参考文档][.FrontPage.StudyMark.DocumentLink]]

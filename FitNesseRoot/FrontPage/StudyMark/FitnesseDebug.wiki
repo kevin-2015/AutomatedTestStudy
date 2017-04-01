@@ -1,0 +1,17 @@
+在测试用例wiki添加如下参数
+!- !define COMMAND_PATTERN {java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=1033,suspend=y -cp %p %m} -!
+
+DEBUG选项参数的意思：
+-XDebug 启用调试；
+-Xrunjdwp 加载JDWP的JPDA参考执行实例；
+transport 用于在调试程序和VM使用的进程之间通讯；
+dt_socket 套接字传输；
+server=y/n VM是否需要作为调试服务器执行；
+address=7899 调试服务器监听的端口号；
+suspend=y/n 是否在调试客户端建立连接之后启动 VM 。
+
+在eclipse配置远程调试
+
+!img https://github.com/slimina/fitnesse_demo/blob/master/images/1.png?raw=true
+
+参考：http://blog.csdn.net/hongchangfirst/article/details/44191925

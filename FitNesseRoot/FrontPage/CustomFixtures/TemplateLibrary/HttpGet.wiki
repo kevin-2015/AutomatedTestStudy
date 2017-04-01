@@ -1,0 +1,18 @@
+---
+Test
+---
+!**> define variable
+#定义变量
+#url：请求地址
+#params：请求参数
+!define url {!-http://www.baidu.com/baidu-!}
+!define params !-!{wd:测试}-!
+**!
+#使用HttpClient fixture
+#|note  |send get request                                          |
+#|note  |send get request and ensure response code equal 200     |
+#|note  |send get request and ensure response body contains '测试'|
+|Script|http client                                  |
+|show  |get;                |${url}|${params}        |
+|check |get response code;|${url}|${params}|200    |
+|check |get;|${url}|${params}|=~/测试/|
