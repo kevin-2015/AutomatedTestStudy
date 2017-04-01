@@ -2,3 +2,9 @@
 /fitnesse-test-demo/*.gitignore
 /fitnesse-test-demo/*.classpath
 /fitnesse-test-demo/.settings
+/selenium-demo/*.project
+/selenium-demo/*.classpath
+/selenium-demo/.settings
+/fitnesse-demo/.settings
+/fitnesse-demo/*.classpath
+/fitnesse-demo/*.project
