@@ -8,6 +8,9 @@
 
 [[!-学习笔记 -!][FrontPage.StudyMark]]
 
+[[!-selenium学习 -!][FrontPage.StudySelenium]]
+
+
 
 点击 [[Edit][.FrontPage?edit]]按钮增加你的第一个 "page"， 点击 [[!-WikiWord-!][.FitNesse.UserGuide.FitNesseWiki.WikiWord]] 编写wiki
 

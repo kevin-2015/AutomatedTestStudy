@@ -5,13 +5,13 @@
 #引入fitnesse jar包
 !path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar
 #指定加载类文件
-!path fitnesse-test-demo\target\classes
+!path fitnesse-demo\target\classes
 **!
 
 #import类包
 !**> import
 |import             |
-|cn.slimsmart.fitnesse.test.demo|
+|cn.slimsmart.fitnesse.demo|
 **!
 !3 query 不匹配报错
 !|Query: employees hired before|10-Dec-1980|

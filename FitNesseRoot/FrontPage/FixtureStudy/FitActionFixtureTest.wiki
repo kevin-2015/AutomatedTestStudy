@@ -24,9 +24,9 @@ Actionfixture和其它的Fixtures的重要区别:  你自定义的Fixtures类不
 |press|count|
 |check|counter|6|
 
-!path fitnesse-test-demo\target\classes
+!path fitnesse-demo\target\classes
 |Action Fixture.|
-|start |cn.slimsmart.fitnesse.test.demo.StudentActionFixture|
+|start |cn.slimsmart.fitnesse.demo.StudentActionFixture|
 |press|init|
 |enter|addStudent|5|
 |check|count|6|

@@ -1,8 +1,8 @@
 用于数据比对
 
-!path fitnesse-test-demo\target\classes
+!path fitnesse-demo\target\classes
 
-!|cn.slimsmart.fitnesse.test.demo.UserRowFixture|
+!|cn.slimsmart.fitnesse.demo.UserRowFixture|
 |id|name|age|
 |1|jack|23|
 |2|tom|34|

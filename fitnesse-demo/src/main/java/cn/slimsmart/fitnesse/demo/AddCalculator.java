@@ -1,4 +1,4 @@
-package cn.slimsmart.fitnesse.test.demo;
+package cn.slimsmart.fitnesse.demo;
 
 import java.util.List;
 

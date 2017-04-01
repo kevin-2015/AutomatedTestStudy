@@ -1,20 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>cn.slimsmart.fitnesse.test.demo</groupId>
-	<artifactId>fitnesse-test-demo</artifactId>
+	<groupId>cn.slimsmart.selenium.demo</groupId>
+	<artifactId>selenium-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
 		<java.version>1.7</java.version>
 	</properties>
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.fitnesse/fitnesse -->
-		<dependency>
-			<groupId>org.fitnesse</groupId>
-			<artifactId>fitnesse</artifactId>
-			<version>20161106</version>
-		</dependency>
+ 
 
 	</dependencies>
 	<build>

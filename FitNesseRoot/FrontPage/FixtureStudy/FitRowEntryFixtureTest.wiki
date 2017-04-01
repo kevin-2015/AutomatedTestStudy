@@ -1,8 +1,8 @@
 !3 主要用于添加数据库或调用方法时参数检查
 
-!path fitnesse-test-demo\target\classes
+!path fitnesse-demo\target\classes
 
-!|cn.slimsmart.fitnesse.test.demo.UserRowEntryFixture|
+!|cn.slimsmart.fitnesse.demo.UserRowEntryFixture|
 |age|
 |23|
 |99|
