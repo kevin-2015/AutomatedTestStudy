@@ -9,7 +9,7 @@ public class UserRowEntryFixture extends RowEntryFixture{
 	@Override
 	public void enterRow() throws Exception {
 		if(age<18){
-			throw new Exception("未满18岁");
+			throw new Exception("age < 18");
 		}
 	}
 
