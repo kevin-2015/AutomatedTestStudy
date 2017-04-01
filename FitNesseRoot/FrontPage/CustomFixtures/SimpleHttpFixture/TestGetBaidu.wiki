@@ -1,13 +1,3 @@
-!define TEST_SYSTEM {slim}
-!**> path
-!path FitNesseRoot/fitnesseJar/*.jar
-**!
-
-!**> import
-|import             |
-|cn.slimsmart.fitnesse.feature.http|
-**!
-
 !**> define variable
 #定义变量
 #url：请求地址
