@@ -15,7 +15,6 @@ public class EmployeesHiredBefore {
 	  }
 
 	  public List<List<List<String>>> query() {
-		  MyFixture 
 	    return
 	      asList( // table level
 	        asList( // row level
