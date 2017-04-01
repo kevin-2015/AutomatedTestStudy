@@ -1,0 +1,2 @@
+mvn clean package dependency:copy-dependencies -DoutputDirectory=../FitNesseRoot/fitnesseJar/extlib  -DincludeScope=compile -Dmaven.test.skip=true
+XCOPY  target\fitnesse-features.jar ..\FitNesseRoot\fitnesseJar\extlib\  /Y
