@@ -55,13 +55,19 @@ selenium下载目录：http://selenium-release.storage.googleapis.com/index.html
 ```
 借助 DesiredCapabilities类，您可以指定浏览器的名称、平台和浏览器版本。您还可指定浏览器支持的其他功能。如果想要远程执行结构化测试，并运行多个浏览器（并且可能是不同的虚拟机），Selenium Grid 提供了很好的解决方案。
 Selenium Grid 2 提供了基础设施，其中每个节点代表了不同浏览器将自身注册到 hub 当中。单数的测试将会调用一个 hub，它负责将每个请求分配到正确的浏览器。Hub 和节点可以运行在不同的虚拟机当中。要实现远程测试，则需要在您将要使用的每台机器上下载 selenium-server-standalone-<version>.jar,并在机器上安装 hub
->java -jar selenium-server-standalone-2.9.0.jar ?role hub
+>java -jar selenium-server-standalone-2.53.0.jar -role hub
 
-您可在 http://localhost:4444/grid/console 访问 Grid 2 控制台，其中会列出所有可用的节点。要注册一个节点，仅需运行一个命令
-> java -jar selenium-server-standalone-2.9.0.jar -role webdriver ?hub http://localhost:4444/grid/register -port 5556
+其默认监听端口4444，默认IP localhost ，如果要修改，只需要加-port 参数和-Hubhost。如：
+>java -jar selenium-server-standalone-2.53.0.jar -role hub -port 1234 -Hubhost 10.1.199.168
+
+您可在 http://10.1.199.168:1234/grid/console 访问 Grid 2 控制台，其中会列出所有可用的节点。要注册一个节点，仅需运行一个命令
+> java -jar selenium-server-standalone-2.53.0.jar -role node -hub http://10.1.199.168:1234/grid/register -port 1235 -Hubhost 10.1.199.168
 
 在默认情况下，注册了 7 个浏览器：5 个 Firefox 实例、1 个 Chrome 实例以及一个 Internet Explorer 实例。您可以在特定的端口上定位一个特定浏览器
->java -jar selenium-server-standalone-2.9.0.jar -role webdriver -hub http://localhost:4444/grid/register -port 5556 -browser browserName=chrome,version=14,platform=MAC
+>java -jar selenium-server-standalone-2.53.0.jar -role node -hub http://10.1.199.168:1234/grid/register -port 1236 -browser browserName=chrome,version=14,platform=MAC
+
+为了使用chrome和IE driver，我们需要这样设置:
+>java -Dwebdriver.ie.driver="C:\Users\workspace\Demo\webDriver\IEDriverServer.exe" -Dwebdriver.chrome.driver="C:\Users\workspace\Demo\webDriver\chromedriver.exe" -jar selenium-server-standalone-2.53.0.jar -role node -hub http://10.1.199.168:1234/grid/register
 
 
 要使用网格，则需要在测试用例中指定 hub 的 URL 和所要控制的浏览器
@@ -70,8 +76,7 @@ Selenium Grid 2 提供了基础设施，其中每个节点代表了不同浏览�
  capability.setBrowserName("chrome"); 
  capability.setVersion("14"); 
  capability.setPlatform(Platform.MAC); 
- WebDriver webdriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), 
- capability);
+ WebDriver webdriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
 ```
 Selenium Grid 2 还向后兼容 Selenium 1。您可以在 hub 中注册 Selenium 1 RC 节点
 java -jar selenium-server-standalone-2.9.0.jar -role rc ?hub http://localhost:4444/grid/register -port 5557
