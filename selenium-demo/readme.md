@@ -48,3 +48,7 @@ selenium下载目录：http://selenium-release.storage.googleapis.com/index.html
 1.[Selenium 2入门](https://www.ibm.com/developerworks/cn/web/wa-selenium2/)
 
 2.[Selenium学习资料](http://www.cnblogs.com/tobecrazy/category/605623.html)
+
+3.[appium移动端的自动化框架实例]（http://www.cnblogs.com/tobecrazy/category/699177.html）
+
+4.[Appium 中文 Appium API 文档]（https://testerhome.com/topics/3144）
