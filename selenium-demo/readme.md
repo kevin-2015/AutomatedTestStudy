@@ -51,8 +51,8 @@ selenium下载目录：http://selenium-release.storage.googleapis.com/index.html
 
 ###### 3.appium移动端的自动化框架
 
-[appium移动端的自动化框架实例]（http://www.cnblogs.com/tobecrazy/category/699177.html）
+[appium移动端的自动化框架实例](http://www.cnblogs.com/tobecrazy/category/699177.html)
 
-[Appium 中文 Appium API 文档]（https://testerhome.com/topics/3144）
+[Appium 中文 Appium API 文档](https://testerhome.com/topics/3144)
 
 [appium简明教程](http://www.yangyanxing.com/article/1266.html)
