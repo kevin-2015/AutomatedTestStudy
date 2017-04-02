@@ -20,8 +20,11 @@ selenium下载目录：http://selenium-release.storage.googleapis.com/index.html
 新建工程将下载的selenium-java-2.53.1.zip里面的jar包导入eclipse里面，或者使用maven引入jar包
 
 **3.取页面元素**
+
 ![image](https://github.com/slimina/fitnesse_demo/blob/master/images/950020-20160705210138936-1387302722.png?raw=true)
+
 实例：
+
 ![image](https://github.com/slimina/fitnesse_demo/blob/master/images/402003944.png?raw=true)
 
 
