@@ -1,5 +1,2 @@
----
-Test
----
 1.上一级编写wiki集成到下一级，如可以添加!-!define TEST_SYSTEM {slim}-!
-2.suite中科院定一个!-SetUp-! test case会被默认include到其他目录，可以用来引用一些公共的资源，如：[[!-SimpleHttpFixture-!][.FrontPage.CustomFixtures.SimpleHttpFixture]]
+2.suite中科院定一个!-SetUp-! test case会被默认include到其他目录，可以用来引用一些公共的资源，如：[[!-SimpleHttpFixture-!][.FrontPage.CustomFixtures.HttpSlim]]

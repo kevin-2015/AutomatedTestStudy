@@ -1,0 +1,30 @@
+---
+Test
+---
+!define TEST_SYSTEM {slim}
+!**> path
+!path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar
+!path FitNesseRoot/fitnesseJar/extlib/*.jar
+**!
+
+!**> import
+|import             |
+|cn.slimsmart.fitnesse.feature.db|
+**!
+
+!**> db connection
+!define jdbcDriver {!-com.mysql.jdbc.Driver-!}
+!define jdbcUrl {!-jdbc:mysql://127.0.0.1:3306/test-!}
+!define username {root}
+!define password {123456}
+
+| script | Db Slim Setup |${jdbcDriver}|${jdbcUrl}| ${username} | ${password} |
+**!
+
+!define username {!-tom-!}
+!define password {!-abc123-!}
+!define mobile {!-12345678910-!}
+!define email {!-abc123@qq.com-!}
+
+| script | Db Slim Update Query | insert into tb_user (username,password,mobile,email,create_time)values('${username}',md5('${password}'),'${mobile}','${email}',now())|
+| check | rowsUpdated; | 1 |

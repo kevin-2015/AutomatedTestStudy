@@ -1,0 +1,19 @@
+---
+Suite
+---
+基于druid数据库连接池，代码源于https://github.com/markfink/dbslim
+
+测试表sql：
+{{{
+CREATE TABLE `tb_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(64) DEFAULT NULL,
+  `password` varchar(64) DEFAULT NULL,
+  `mobile` varchar(16) DEFAULT NULL,
+  `email` varchar(64) DEFAULT NULL,
+  `create_time` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+}}}
+
+!contents -R2 -g -p -f -h

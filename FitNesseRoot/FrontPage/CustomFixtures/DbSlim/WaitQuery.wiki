@@ -1,0 +1,33 @@
+---
+Test
+---
+!define TEST_SYSTEM {slim}
+!**> path
+!path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar
+!path FitNesseRoot/fitnesseJar/extlib/*.jar
+**!
+
+!**> import
+|import                          |
+|cn.slimsmart.fitnesse.feature.db|
+**!
+
+!**> db connection
+!define jdbcDriver {!-com.mysql.jdbc.Driver-!}
+!define jdbcUrl {!-jdbc:mysql://127.0.0.1:3306/test-!}
+!define username {root}
+!define password {123456}
+
+|script|Db Slim Setup|${jdbcDriver}|${jdbcUrl}|${username}|${password}|
+**!
+
+!|script                                                               |
+|start|db slim wait query          |select 0 as rowcount from dual|3000|
+|start|db slim select query        |select 2 as result from dual       |
+|show |dataByColumnNameAndRowIndex;|result                        |0   |
+
+
+!|script                                                                |
+|start|db slim wait query          |select 1 as rowcount from dual|20000|
+|start|db slim select query        |select 2 as result from dual        |
+|show |dataByColumnNameAndRowIndex;|result                        |0    |

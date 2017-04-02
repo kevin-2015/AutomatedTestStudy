@@ -1,0 +1,41 @@
+---
+Test
+---
+!define TEST_SYSTEM {slim}
+!**> path
+!path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar
+!path FitNesseRoot/fitnesseJar/extlib/*.jar
+**!
+
+!**> import
+|import                          |
+|cn.slimsmart.fitnesse.feature.db|
+**!
+
+!**> db connection
+!define jdbcDriver {!-com.mysql.jdbc.Driver-!}
+!define jdbcUrl {!-jdbc:mysql://127.0.0.1:3306/test-!}
+!define username {root}
+!define password {123456}
+
+|script|Db Slim Setup|${jdbcDriver}|${jdbcUrl}|${username}|${password}|
+**!
+!define id {3}
+
+|Query:Db Slim Select Query|select * from tb_user where id = ${id}                        |
+|username                  |password                        |mobile     |email            |
+|tom                       |e99a18c428cb38d5f260853678922e03|12345678910|!-abc123@qq.com-!|
+
+
+!define sql (select * from tb_user where id = ${id})
+
+|script           |Db Slim Select Query         |${sql}                                 |
+|check            |data;                        |0       |0            |${id}           |
+|check            |dataByColumnIndexAndRowIndex;|0       |0            |${id}           |
+|check            |data By Column Index         |0       |and Row Index|0     |${id}    |
+|check            |data;                        |id      |0            |${id}           |
+|check            |dataByColumnNameAndRowIndex; |id      |0            |${id}           |
+|check            |dataByColumnNameAndRowIndex; |id      |0            |> 0             |
+|$currentusername=|dataByColumnNameAndRowIndex; |username|0                             |
+|check            |dataByColumnNameAndRowIndex; |username|0            |$currentusername|
+
