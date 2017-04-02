@@ -2,8 +2,11 @@
 ---
 
 Selenium 是用于测试 Web 应用程序用户界面 (UI) 的常用框架。它是一款用于运行端到端功能测试的超强工具。您可以使用多个编程语言编写测试，并且 Selenium 能够在一个或多个浏览器中执行这些测试。
+
 官网地址：http://seleniumhq.org/
+
 项目地址：https://github.com/SeleniumHQ/selenium
+
 wiki地址：https://github.com/SeleniumHQ/selenium/wiki
 
 **1.环境搭建**
