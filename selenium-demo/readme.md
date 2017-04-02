@@ -46,3 +46,5 @@ selenium下载目录：http://selenium-release.storage.googleapis.com/index.html
 #### 参考文档：
 
 1.[Selenium 2入门](https://www.ibm.com/developerworks/cn/web/wa-selenium2/)
+
+2.[Selenium学习资料](http://www.cnblogs.com/tobecrazy/category/605623.html)
