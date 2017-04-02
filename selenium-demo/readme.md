@@ -37,6 +37,12 @@ selenium下载目录：http://selenium-release.storage.googleapis.com/index.html
 2.chrome的xpath插件，选中元素，copy -->copy xpth即可获取元素路径
 ![image](https://github.com/slimina/fitnesse_demo/blob/master/images/13.png?raw=true)
 
-参考文档：
+**5.总结图**
+![image](https://github.com/slimina/fitnesse_demo/blob/master/images/21.png?raw=true)
+![image](https://github.com/slimina/fitnesse_demo/blob/master/images/22.png?raw=true)
+![image](https://github.com/slimina/fitnesse_demo/blob/master/images/23.png?raw=true)
+![image](https://github.com/slimina/fitnesse_demo/blob/master/images/24.png?raw=true)
+
+#### 参考文档：
 
 1.[Selenium 2入门](https://www.ibm.com/developerworks/cn/web/wa-selenium2/)
