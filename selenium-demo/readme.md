@@ -32,6 +32,8 @@ selenium下载目录：http://selenium-release.storage.googleapis.com/index.html
 1.火狐的firepath（安装firepath和firebug），安装完成后，打开debug控制台切换到firepath，使用拾取器选中页面一元素，即可在xpath显示当前元素的路径
 ![image](https://github.com/slimina/fitnesse_demo/blob/master/images/12.png?raw=true)
 
+参考：http://blog.csdn.net/sxl0727tu/article/details/51897693
+
 2.chrome的xpath插件，选中元素，copy -->copy xpth即可获取元素路径
 ![image](https://github.com/slimina/fitnesse_demo/blob/master/images/13.png?raw=true)
 

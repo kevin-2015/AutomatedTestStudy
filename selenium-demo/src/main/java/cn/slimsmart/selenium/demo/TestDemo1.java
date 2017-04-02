@@ -54,4 +54,16 @@ public class TestDemo1 {
 		Thread.sleep(3000);
 		driver.quit();
 	}
+
+	@Test
+	public void getWindowInfo() {
+		driver.get("http://www.baidu.com");
+        driver.manage().window().maximize();
+		System.out.println("CurrentUrl: " + driver.getCurrentUrl());
+		// System.out.println("PageSource: "+driver.getPageSource());
+		System.out.println("Title: " + driver.getTitle());
+		System.out.println("WindowHandle: " + driver.getWindowHandle());
+		System.out.println("hashCode: " + driver.hashCode());
+		driver.quit();	
+	}
 }

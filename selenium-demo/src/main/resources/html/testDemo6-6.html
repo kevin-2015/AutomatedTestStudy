@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>calc</title>
+<script>
+    function calcResult() {
+        var num1 = document.getElementById("id1").value;
+        var calctag = document.getElementById("id2").value;
+        var num2 = document.getElementById("id3").value;
+        var result = 0;
+
+        switch (calctag) {
+        case "+":
+            result = parseInt(num1) + parseInt(num2);
+            break;
+        case "-":
+            result = parseInt(num1) - parseInt(num2);
+            break;
+        case "*":
+            result = parseInt(num1) * parseInt(num2);
+            break;
+        case "/":
+            if (parseInt(num2) == 0) {
+                alert("数字2不能为0");
+            } else {
+                result = parseInt(num1) / parseInt(num2);
+            }
+            break;
+        default:
+            alert("......");
+        }
+        document.getElementById("id5").value = result;
+    }
+</script>
+</head>
+<body>
+    <form>
+        数字1:<input type="text" id="id1" name="num1" />
+         <select id="id2" name="calc">
+            <option value="+" selected="selected">加</option>
+            <option value="-">减</option>
+            <option value="*">乘</option>
+            <option value="/">除</option>
+        </select> 
+        数字2:<input type="text" id="id3" name="num2" />
+         <input type="button" name="is" id="id4" value="=" onclick="calcResult()" />
+         结果:<input type="text" id="id5" name="result" />
+    </form>
+</body>
+</html>
