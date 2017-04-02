@@ -34,7 +34,7 @@ fitnesse 工作目录，存放wiki编写的文件以及以来的jar
 
 ****5.xebium****
 
-xebium项目源码：http://xebia.github.com/Xebium
+xebium项目源码：https://github.com/xebia/Xebium
 
 ****6.images等资源****
 
