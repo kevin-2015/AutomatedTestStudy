@@ -1,0 +1,85 @@
+package cn.slimsmart.fitnesse.feature.db;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import javax.sql.DataSource;
+
+public class DbSlimWaitQuery {
+
+	private String connectionPoolName;
+	private String sql;
+	private int timeout;
+
+	public DbSlimWaitQuery(String sql) {
+		this(DbSlimSetup.DEFAULT_CONNECTION_POOL_NAME, sql, DbSlimSetup.DEFAULT_WAIT_TIMEOUT);
+	}
+
+	public DbSlimWaitQuery(String sql, int timeout) {
+		this(DbSlimSetup.DEFAULT_CONNECTION_POOL_NAME, sql, timeout);
+	}
+
+	public DbSlimWaitQuery(String connectionPoolName, String sql, int timeout) {
+		this.connectionPoolName = connectionPoolName;
+		sql = sql.replaceAll("\\n", " ");
+		sql = sql.replaceAll("\\t", " ");
+		sql = sql.replaceAll("<br/>", " ");
+		sql = sql.trim();
+		this.sql = sql;
+		this.timeout = timeout;
+		this.waitForRowcount();
+	}
+
+	private void waitForRowcount() {
+		// execute the db query until rowcount > 0 or timeout
+		long start_time = System.nanoTime();
+		DataSource dataSource = DbConnectionFactory.getDataSource(connectionPoolName);
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rset = null;
+		int rowcount = 0;
+		int sleeptime = 0; // at start the sleeptime is 0 seconds
+
+		while (rowcount == 0 && ((System.nanoTime() - start_time) / 1000000 < timeout)) {
+			try {
+				Thread.sleep(sleeptime);
+			} catch (InterruptedException ex) {
+				Thread.currentThread().interrupt();
+			}
+			sleeptime += 1000; // next time we will sleep 1 second longer
+			try {
+				conn = dataSource.getConnection();
+				stmt = conn.createStatement();
+				rset = stmt.executeQuery(sql);
+				rset.next();
+
+				rowcount = rset.getInt("rowcount");
+			} catch (SQLException e) {
+				e.printStackTrace();
+				throw new RuntimeException(e);
+			} finally {
+				try {
+					if (rset != null)
+						rset.close();
+				} catch (Exception e) {
+				}
+				try {
+					if (stmt != null)
+						stmt.close();
+				} catch (Exception e) {
+				}
+				try {
+					if (conn != null)
+						conn.close();
+				} catch (Exception e) {
+				}
+			}
+		}
+		if (rowcount == 0 && ((System.nanoTime() - start_time) / 1000000 > timeout)) {
+			throw new RuntimeException("message:<<wait for rowcount could not be completed within " + timeout + " ms>>");
+		}
+		System.out.println("wait time for rowcount was " + (System.nanoTime() - start_time) / 1000000 + "ms.");
+	}
+}
