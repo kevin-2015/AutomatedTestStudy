@@ -15,6 +15,13 @@
 			<artifactId>selenium-java</artifactId>
 			<version>2.53.1</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.opera/operadriver -->
+		<!-- 要在 Opera 中执行测试，需要实例化 OperaDriver类，这是由 Opera 直接开发的。记得要将包含驱动的 JAR 包括到项目中 -->
+		<dependency>
+			<groupId>com.opera</groupId>
+			<artifactId>operadriver</artifactId>
+			<version>1.5</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
