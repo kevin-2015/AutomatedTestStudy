@@ -74,6 +74,7 @@ Selenium Grid 2 提供了基础设施，其中每个节点代表了不同浏览�
 为了使用chrome和IE driver，我们需要这样设置:
 >java -Dwebdriver.ie.driver="C:\Users\workspace\Demo\webDriver\IEDriverServer.exe" -Dwebdriver.chrome.driver="C:\Users\workspace\Demo\webDriver\chromedriver.exe" -jar selenium-server-standalone-2.53.1.jar -role node -hub http://10.1.199.168:1234/grid/register
 
+![grid](https://github.com/slimina/fitnesse_demo/blob/master/images/25.png?raw=true)
 
 要使用网格，则需要在测试用例中指定 hub 的 URL 和所要控制的浏览器
 ```java
