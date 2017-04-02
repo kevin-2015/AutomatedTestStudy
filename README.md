@@ -32,10 +32,13 @@ selenium的一些测试java代码以及集成fitnesse实例代码
 
 fitnesse 工作目录，存放wiki编写的文件以及以来的jar
 
-****5.images****
+****5.xebium****
 
-文档展示图片
+xebium项目源码：http://xebia.github.com/Xebium
 
+****6.images等资源****
+
+文档展示图片等资源
 **3. fitnesse服务启动**
 
 window 运行startFitnesse.bat即可，linux运行startFitnesse脚本，运行fitnesse-standalone.jar，工作目录FitNesseRoot
