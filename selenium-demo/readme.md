@@ -28,6 +28,7 @@ selenium下载目录：http://selenium-release.storage.googleapis.com/index.html
 ![image](https://github.com/slimina/fitnesse_demo/blob/master/images/402003944.png?raw=true)
 
 **4.使用xpath获取元素路径**
+
 1.火狐的firepath（安装firepath和firebug），安装完成后，打开debug控制台切换到firepath，使用拾取器选中页面一元素，即可在xpath显示当前元素的路径
 ![image](https://github.com/slimina/fitnesse_demo/blob/master/images/12.png?raw=true)
 
