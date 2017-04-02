@@ -1,20 +1,30 @@
-**»ùÓÚselenium¿ª·¢²âÊÔ**
+**åŸºäºseleniumå¼€å‘webæµ‹è¯•**
 ---
-**1.»·¾³´î½¨**
 
-°²×°Firefoxä¯ÀÀÆ÷£¬²¢ÔÚÌí¼Ó×é¼şÒ³ÃæµÄËÑË÷ÊäÈë¿òÄÚÊäÈëfirebugºÍfirepath£¬½øĞĞ·Ö±ğËÑË÷ºÍ°²×°£¬°²×°Íê³ÉºóÖØÆôFireFoxä¯ÀÀÆ÷£¬Ê¹²å¼şÉúĞ§¡£
+Selenium æ˜¯ç”¨äºæµ‹è¯• Web åº”ç”¨ç¨‹åºç”¨æˆ·ç•Œé¢ (UI) çš„å¸¸ç”¨æ¡†æ¶ã€‚å®ƒæ˜¯ä¸€æ¬¾ç”¨äºè¿è¡Œç«¯åˆ°ç«¯åŠŸèƒ½æµ‹è¯•çš„è¶…å¼ºå·¥å…·ã€‚æ‚¨å¯ä»¥ä½¿ç”¨å¤šä¸ªç¼–ç¨‹è¯­è¨€ç¼–å†™æµ‹è¯•ï¼Œå¹¶ä¸” Selenium èƒ½å¤Ÿåœ¨ä¸€ä¸ªæˆ–å¤šä¸ªæµè§ˆå™¨ä¸­æ‰§è¡Œè¿™äº›æµ‹è¯•ã€‚
 
-seleniumºÍFirefox³£³£»á³öÏÖ°æ±¾²»Æ¥ÅäµÄÎÊÌâ£¬³£¼ûµÄÏÖÏóÊÇFirefoxä¯ÀÀÆ÷Æô¶¯Ê±¾Í±¨´í£¬ËùÒÔ¾ÍĞèÒªÊ¹ÓÃÀÏ°æ±¾µÄFireFox£¬Èç26°æ±¾
+**1.ç¯å¢ƒæ­å»º**
 
-FirefoxÏÂÔØÄ¿Â¼£ºhttps://ftp.mozilla.org/pub/firefox/releases/
+seleniumå¯¹Firefoxæµè§ˆå™¨æ”¯æŒçš„æ¯”è¾ƒå¥½ï¼Œæ‰€ä»¥åœ¨å¼€å‘æµ‹è¯•caseä¸€èˆ¬ä½¿ç”¨Firefoxæµè§ˆå™¨ã€‚éœ€è¦å¹¶åœ¨æ·»åŠ ç»„ä»¶é¡µé¢çš„æœç´¢è¾“å…¥æ¡†å†…è¾“å…¥firebugå’Œfirepathï¼ˆå®šä½å…ƒç´ ï¼‰ï¼Œè¿›è¡Œåˆ†åˆ«æœç´¢å’Œå®‰è£…ï¼Œå®‰è£…å®Œæˆåé‡å¯FireFoxæµè§ˆå™¨ï¼Œä½¿æ’ä»¶ç”Ÿæ•ˆã€‚
 
-seleniumÏÂÔØÄ¿Â¼£ºhttp://selenium-release.storage.googleapis.com/index.html
+seleniumå’ŒFirefoxå¸¸å¸¸ä¼šå‡ºç°ç‰ˆæœ¬ä¸åŒ¹é…çš„é—®é¢˜ï¼Œå¸¸è§çš„ç°è±¡æ˜¯Firefoxæµè§ˆå™¨å¯åŠ¨æ—¶å°±æŠ¥é”™ï¼Œæ‰€ä»¥å°±éœ€è¦ä½¿ç”¨è€ç‰ˆæœ¬çš„FireFoxï¼Œå¦‚26ç‰ˆæœ¬
 
-**2.eclipse»·¾³**
+Firefoxä¸‹è½½ç›®å½•ï¼šhttps://ftp.mozilla.org/pub/firefox/releases/
 
-ĞÂ½¨¹¤³Ì½«ÏÂÔØµÄselenium-java-2.53.1.zipÀïÃæµÄjar°üµ¼ÈëeclipseÀïÃæ£¬»òÕßÊ¹ÓÃmavenÒıÈëjar°ü
+seleniumä¸‹è½½ç›®å½•ï¼šhttp://selenium-release.storage.googleapis.com/index.html
 
-**3.È¡Ò³ÃæÔªËØ**
+ä¹Ÿå¯ä»¥åœ¨è¿™ä¸‹è½½ï¼š[seleniumè‡ªåŠ¨åŒ–æµ‹è¯•å·¥å…·Firefoxä»¥åŠæ’ä»¶](http://download.csdn.net/detail/tianwei7518/9801880)
+
+**2.eclipseç¯å¢ƒ**
+
+æ–°å»ºå·¥ç¨‹å°†ä¸‹è½½çš„selenium-java-2.53.1.zipé‡Œé¢çš„jaråŒ…å¯¼å…¥eclipseé‡Œé¢ï¼Œæˆ–è€…ä½¿ç”¨mavenå¼•å…¥jaråŒ…
+
+**3.å–é¡µé¢å…ƒç´ **
 ![image](https://github.com/slimina/fitnesse_demo/blob/master/images/950020-20160705210138936-1387302722.png?raw=true)
-ÊµÀı£º
+å®ä¾‹ï¼š
 ![image](https://github.com/slimina/fitnesse_demo/blob/master/images/402003944.png?raw=true)
+
+
+å‚è€ƒæ–‡æ¡£ï¼š
+
+1.[Selenium 2å…¥é—¨](https://www.ibm.com/developerworks/cn/web/wa-selenium2/)
