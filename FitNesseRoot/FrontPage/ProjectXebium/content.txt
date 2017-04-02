@@ -3,8 +3,12 @@
 !*> '''Variables Defined'''
 
 !define TEST_SYSTEM {slim}
+!define FITNESSE_SUT_PORT {7000}
+!define BROWSER {firefox}
 
-*!
-!*****> '''Classpath'''
-!pomFile pom.xml@runtime
-*****!
+
+!**> path
+!path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar
+!path FitNesseRoot/fitnesseJar/xebiumlib/*.jar
+**!
+
