@@ -66,7 +66,7 @@ Selenium Grid 2 提供了基础设施，其中每个节点代表了不同浏览�
 >java -jar selenium-server-standalone-2.53.1.jar -role hub -port 1234 -Hubhost 10.1.199.168
 
 您可在 http://10.1.199.168:1234/grid/console 访问 Grid 2 控制台，其中会列出所有可用的节点。要注册一个节点，仅需运行一个命令
-> java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://10.1.199.168:1234/grid/register -port 1235 -Hubhost 10.1.199.168
+> java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://10.1.199.168:1234/grid/register -port 1235
 
 在默认情况下，注册了 11 个浏览器：5 个 Firefox 实例、5 个 Chrome 实例以及一个 Internet Explorer 实例。您可以在特定的端口上定位一个特定浏览器
 >java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://10.1.199.168:1234/grid/register -port 1236 -browser browserName=chrome,version=14,platform=MAC
