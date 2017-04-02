@@ -1,0 +1,5 @@
+#!/bin/bash
+mvn clean package dependency:copy-dependencies -DoutputDirectory=../FitNesseRoot/fitnesseJar/xebiumlib  -DincludeScope=compile -Dmaven.test.skip=true
+copy -f target/xebium-0.14-SNAPSHOT.jar ../FitNesseRoot/fitnesseJar/xebiumlib/
+
+rm -f ../FitNesseRoot/fitnesseJar/xebiumlib/fitnesse-20161106.jar

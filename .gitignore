@@ -9,3 +9,6 @@
 /fitnesse-demo/*.classpath
 /fitnesse-demo/*.project
 /.project
+/xebium/*.classpath
+/xebium/*.project
+/xebium/.settings
