@@ -1,7 +1,8 @@
 ---
 Suite
 ---
-基于druid数据库连接池，代码源于https://github.com/markfink/dbslim
+!4 基于druid数据库连接池，代码源于https://github.com/markfink/dbslim
+!contents -R2 -g -p -f -h
 
 测试表sql：
 {{{
@@ -15,5 +16,3 @@ CREATE TABLE `tb_user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 }}}
-
-!contents -R2 -g -p -f -h

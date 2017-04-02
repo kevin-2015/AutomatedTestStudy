@@ -1,0 +1,28 @@
+---
+Test
+---
+!5 1.安装Firefox插件
+安装selenium IDE 插件，下载地址：http://www.seleniumhq.org/projects/ide/
+安装selenium-xebium-formatter：下载地址：https://addons.mozilla.org/en-US/firefox/addon/selenium-xebium-formatter/
+
+请注意，Xebium具有对特定版本的selenium和FitNesse的固定版本依赖性。目前的稳定版本Xebium 0.10取决于Selenium 2.29.0，其功能与Firefox版本高达18.0.x.
+与此同时，Xebium的开发还在继续，这导致了新功能和更广泛的浏览器（版本）支持。 使用这些较新的开发版本可能会引发意外的行为和稳定性问题。
+
+参考官网安装说明：http://xebia.github.io/Xebium/#installation
+
+!5 2.录制脚本
+打开Firefox浏览器，并打开selenium IDE
+!img https://github.com/slimina/AutomatedTestStudy/blob/master/images/e1.png?raw=true
+界面按钮区域介绍
+!img https://github.com/slimina/AutomatedTestStudy/blob/master/images/e2.png?raw=true
+
+!img https://github.com/slimina/AutomatedTestStudy/blob/master/images/e3.png?raw=true
+
+导出录制的xebium formatter脚本
+| script | selenium driver fixture |
+| start browser | firefox | on url | https://www.baidu.com/ |
+| do | open | on | / |
+| ensure | do | type | on | id=kw | with | 测试网速 |
+| ensure | do | click | on | id=su |
+| ensure | do | click | on | link=测速网 - 在线网速测试,网络测速 - !-SpeedTest.cn-! |
+| stop browser |

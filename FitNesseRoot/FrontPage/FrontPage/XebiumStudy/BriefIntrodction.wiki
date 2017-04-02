@@ -1,0 +1,11 @@
+Xebium通过将Selenium（webdriver）集成到FitNesse，以非侵入式的方式为您提供了FitNesse的易用性、可维护以及Selenium强大功能等web集成测试，并使测试变得更加简单容易。
+'''特性:'''
+1.完全支持Selenium-IDE。使用Xebium格式，Selenium IDE中记录的脚本可以自动转换为wiki语法，并可粘贴到FitNesse中。 反之亦然：Wiki语法可以复制回Selenium IDE，并可以作为Selenium脚本运行。
+2.支持创建数据驱动测试
+3.支持使用WebDriver接口和Selenium Server分布式远程执行测试
+4.使用itNesse的slim引擎运行测试用例
+官网地址：http://xebia.github.io/Xebium
+项目地址：https://github.com/xebia/Xebium
+学习地址：http://xebia.github.io/Xebium/#getting-started
+
+
