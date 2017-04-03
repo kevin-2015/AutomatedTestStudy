@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20161106</FitNesseVersion>
+  <rootPath>FrontPage.XebiumTemplate.MySuite.MyFirstTest</rootPath>
+    <result>
+    <counts>
+      <right>1</right>
+      <wrong>3</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2017-04-03T15:21:45+08:00</date>
+    <runTimeInMillis>655</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="FrontPage.XebiumTemplate.ScenarioLibrary"&gt;.FrontPage.XebiumTemplate.ScenarioLibrary&lt;/a&gt; &lt;a href="FrontPage.XebiumTemplate.ScenarioLibrary?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;In the Scenario library the logical steps in the test case can be translated to Xebium statements. Normally this means splitting up the test recorded with Selenium IDE.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td colspan="4"&gt;Given a working fitnesse instance&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;ensure&lt;/td&gt;
+		&lt;td&gt;do&lt;/td&gt;
+		&lt;td&gt;open&lt;/td&gt;
+		&lt;td&gt;on&lt;/td&gt;
+		&lt;td&gt;/&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;ensure&lt;/td&gt;
+		&lt;td&gt;do&lt;/td&gt;
+		&lt;td&gt;verifyTextPresent&lt;/td&gt;
+		&lt;td&gt;on&lt;/td&gt;
+		&lt;td&gt;XebiumTemplate&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td colspan="4"&gt;When I open the link to the template project&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;ensure&lt;/td&gt;
+		&lt;td&gt;do&lt;/td&gt;
+		&lt;td&gt;clickAndWait&lt;/td&gt;
+		&lt;td&gt;on&lt;/td&gt;
+		&lt;td&gt;link=XebiumTemplate&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td colspan="4"&gt;Then the template directory structure is shown&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;ensure&lt;/td&gt;
+		&lt;td&gt;do&lt;/td&gt;
+		&lt;td&gt;verifyTextPresent&lt;/td&gt;
+		&lt;td&gt;on&lt;/td&gt;
+		&lt;td&gt;Scenario Library&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;Okay, This is a bit of a dull test case.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="scenario closed"&gt;
+		&lt;td class="fail"&gt;Given a working fitnesse instance&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="scenario-detail closed-detail"&gt;&lt;td colspan="1"&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td colspan="4"&gt;Given a working fitnesse instance&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;ensure&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;do&lt;/td&gt;
+		&lt;td&gt;open&lt;/td&gt;
+		&lt;td&gt;on&lt;/td&gt;
+		&lt;td&gt;/&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;&lt;span class="fail"&gt;ensure&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;do&lt;/td&gt;
+		&lt;td&gt;verifyTextPresent&lt;/td&gt;
+		&lt;td&gt;on&lt;/td&gt;
+		&lt;td&gt;XebiumTemplate&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="scenario closed"&gt;
+		&lt;td class="fail"&gt;When I open the link to the template project&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="scenario-detail closed-detail"&gt;&lt;td colspan="1"&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td colspan="4"&gt;When I open the link to the template project&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;&lt;span class="fail"&gt;ensure&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;do&lt;/td&gt;
+		&lt;td&gt;clickAndWait&lt;/td&gt;
+		&lt;td&gt;on&lt;/td&gt;
+		&lt;td&gt;link=XebiumTemplate&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="scenario closed"&gt;
+		&lt;td class="fail"&gt;Then the template directory structure is shown&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="scenario-detail closed-detail"&gt;&lt;td colspan="1"&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td colspan="4"&gt;Then the template directory structure is shown&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;&lt;span class="fail"&gt;ensure&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;do&lt;/td&gt;
+		&lt;td&gt;verifyTextPresent&lt;/td&gt;
+		&lt;td&gt;on&lt;/td&gt;
+		&lt;td&gt;Scenario Library&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Next step would be to make the statements somewhat more sophisticated, e.g. by making certain parts variable. Read the FitNesse documentation on Scenario libraries&lt;a title="create page" href="FitNesse.UserGuide.SliM.ScenarioTable?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt;.&lt;br/&gt;</content>
+    <relativePageName>MyFirstTest</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='scriptTable_3_0/scriptTable_0_0', instruction='call', instanceName='scriptTableActor', methodName='doOn', args=[open, /]}</instruction>
+        <slimResult>pass()</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_3_0/scriptTable_0_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>EnsureActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_3_0/scriptTable_0_1', instruction='call', instanceName='scriptTableActor', methodName='doOn', args=[verifyTextPresent, XebiumTemplate]}</instruction>
+        <slimResult>fail()</slimResult>
+                <expectation>
+                    <status>fail</status>
+                    <instructionId>scriptTable_3_0/scriptTable_0_1</instructionId>
+                    <col>0</col>
+                              <row>2</row>
+                    <type>EnsureActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_3_1/scriptTable_1_0', instruction='call', instanceName='scriptTableActor', methodName='doOn', args=[clickAndWait, link=XebiumTemplate]}</instruction>
+        <slimResult>fail()</slimResult>
+                <expectation>
+                    <status>fail</status>
+                    <instructionId>scriptTable_3_1/scriptTable_1_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>EnsureActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_3_2/scriptTable_2_0', instruction='call', instanceName='scriptTableActor', methodName='doOn', args=[verifyTextPresent, Scenario Library]}</instruction>
+        <slimResult>fail()</slimResult>
+                <expectation>
+                    <status>fail</status>
+                    <instructionId>scriptTable_3_2/scriptTable_2_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>EnsureActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>655</totalRunTimeInMillis>
+</testResults>
+

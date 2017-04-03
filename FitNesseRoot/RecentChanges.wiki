@@ -1,5 +1,10 @@
-|FrontPage.ProjectXebium||02:03:43 星期一, 四月 03, 2017|
-|FrontPage.XebiumStudy||01:22:16 星期一, 四月 03, 2017|
+|FrontPage.XebiumStudy.SimpleDemo||17:37:29 星期一, 四月 03, 2017|
+|FrontPage.ProjectXebium||15:52:40 星期一, 四月 03, 2017|
+|FrontPage.XebiumStudy||15:29:21 星期一, 四月 03, 2017|
+|FrontPage.CustomFixtures.DbSlim.SqlQuery||15:29:01 星期一, 四月 03, 2017|
+|FrontPage.XebiumTemplate.ScenarioLibrary||15:23:37 星期一, 四月 03, 2017|
+|FrontPage.XebiumTemplate||15:21:30 星期一, 四月 03, 2017|
+|FrontPage.StudyMark.IntegratedJenkins||15:06:20 星期一, 四月 03, 2017|
 |FrontPage.StudySelenium||23:47:36 星期六, 四月 01, 2017|
 |FrontPage||23:47:12 星期六, 四月 01, 2017|
 |FrontPage.StudyMark.DefaultRule||21:54:15 星期六, 四月 01, 2017|
@@ -7,4 +12,3 @@
 |FrontPage.CustomFixtures.SimpleHttpFixture.TestPostV2transapi||21:46:52 星期六, 四月 01, 2017|
 |FrontPage.CustomFixtures.SimpleHttpFixture.SetUp||21:46:30 星期六, 四月 01, 2017|
 |FrontPage.CustomFixtures.SimpleHttpFixture.TestGetBaidu||21:46:12 星期六, 四月 01, 2017|
-|FrontPage.StudyMark.IntegratedJenkins||08:39:40 星期三, 三月 29, 2017|

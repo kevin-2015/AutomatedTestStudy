@@ -19,3 +19,5 @@
 
 !4 3.通过构建，完成自动化测试，查看结果
 !img https://github.com/slimina/fitnesse_demo/blob/master/images/10.png?raw=true
+
+安装插件HTML Publisher plugin，配合Email Extension Plugin插件将每次测试的结果报告邮件发送出去。

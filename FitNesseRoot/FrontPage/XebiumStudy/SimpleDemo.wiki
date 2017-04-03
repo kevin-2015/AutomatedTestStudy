@@ -1,0 +1,188 @@
+---
+Test
+---
+!define TEST_SYSTEM {slim}
+
+!**> path
+!path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar
+!path FitNesseRoot/fitnesseJar/xebiumlib/*.jar
+**!
+
+|import                    |
+|com.xebia.incubator.xebium|
+
+
+|script       |selenium driver fixture              |
+|start browser|firefox|on url|https://www.baidu.com/|
+|set step delay to;|10000|
+|do           |open   |on    |/?kw=test             |
+|ensure       |do     |type  |on |id=kw |with |测试网速 |
+|ensure       |do     |click |on |id=su             |
+|ensure       |do     |click |on |link=新闻           |
+|show |getCommandProcessor|
+|stop browser                                       |
+
+1.script实例化!-SeleniumDriverFixture-!
+2.调用!-startBrowserOnUrl-!参数browser和browserUrl设置webdriver和访问域
+3.设置两步之间的延时
+4.调用doOn方法打开访问地址https://www.baidu.com/?kw=test   
+5.调用doOn方法设置id=kw输入框的值为测试网速
+6.调用doOn方法点击id=su按钮
+7.调用doOn方法点击link=新闻链接
+8.getCommandProcessor返回当前处理器
+9.stop browser关闭浏览器
+
+关于!-FitNesse-! script table 参考：[[SlimScriptTest][FrontPage.FixtureStudy.SlimScriptTest]]
+
+参考：!-SeleniumDriverFixture-!类的实现方法：
+{{{
+SeleniumDriverFixture：构造器函数
+void startBrowserOnUrl(final String browser, final String browserUrl)：启动browser和访问域
+void startBrowserOnUrlUsingRemoteServerOnHostOnPort(final String browser, final String browserUrl, final String serverHost, final int serverPort)：使用远程server，为兼容Selenium 1，已废弃，使用RemoteWebDriverSupplier，返回WebDriver，调用同下
+void startDriverOnUrl(final WebDriver webDriver, final String browserUrl)：启动WebDriver和访问域，远程server可以使用这个
+WebDriver getWebDriver()：返回当前处理的webdriver
+CommandProcessor getCommandProcessor()：返回当前处理器
+void setStepDelayTo(String stepDelay)：设置两步之前的延时：slow，fast，或毫秒数
+void setTimeoutTo(long timeout)：设置超时时间，单位毫秒
+void setTimeoutToSeconds(long timeout)：同上，单位秒
+void setStopBrowserOnAssertion(boolean stopBrowserOnAssertion)：设置是否遇见断言停止浏览器，默认为true
+void useFastSeleniumEmulation(Boolean useFastSeleniumEmulation)：设置是否使用FastWebDriverCommandProcessor处理器，默认为true，否则使用WebDriverCommandProcessor
+oid saveScreenshotAfter(String policy)：设置保存截图的策略：failure，error，every step，step，nothing，none
+void saveScreenshotAfterInFolder(String policy, String baseDir)：设置保存截图的策略及图片位置
+void loadCustomBrowserPreferencesFromFile(String filename)：加载Browser自定义配置
+void loadFirefoxProfileFromDirectory(String directory)：加载 Firefox Browser自定义配置
+String is(final String command)和String isOn(final String command)获取command返回值
+String is(final String command, final String[] parameters)和String isOn(final String command, final String target)：同上，带参数
+String isOnWith(final String command, final String target) 同上
+void addAliasForLocator(String alias, String locator): 为元素定位器增加一个别名，方便查找
+void clearAliases():清除别名
+boolean doOn(final String command, final String target):在target处理事件
+boolean doOnWith(final String command, final String target, final String value)：输入值
+void stopBrowser() ：停止浏览器
+}}}
+
+关于command参考!-ExtendedSeleniumCommand-!类：
+!***> WEB_DRIVER_COMMANDS
+"addLocationStrategy",
+		"addSelection", // loc
+		"altKeyDown",
+		"altKeyUp",
+		"assignId", // loc
+		"attachFile",
+		"captureScreenshotToString",
+		"click", // loc
+		"check", // loc
+		"chooseCancelOnNextConfirmation",
+		"chooseOkOnNextConfirmation",
+		"close",
+		"createCookie",
+		"controlKeyDown",
+		"controlKeyUp",
+		"deleteAllVisibleCookies",
+		"deleteCookie",
+		"doubleClick", // loc
+		"dragdrop", // loc
+		"dragAndDrop", // loc
+		"dragAndDropToObject", // loc, loc
+		"fireEvent",
+		"focus", // loc
+		"getAlert",
+		"getAllButtons", // arr
+		"getAllFields", // arr
+		"getAllLinks", // arr
+		"getAllWindowTitles", // arr
+		"getAttribute",
+		"getAttributeFromAllWindows", // arr
+		"getBodyText",
+		"getConfirmation",
+		"getCookie",
+		"getCookieByName",
+		"getCssCount", // num
+		"getElementHeight", // num
+		"getElementIndex", // num
+		"getElementPositionLeft", // num
+		"getElementPositionTop", // num
+		"getElementWidth", // num
+		"getEval",
+		"getExpression",
+		"getHtmlSource",
+		"getLocation",
+		"getSelectedId",
+		"getSelectedIds", // arr 
+		"getSelectedIndex",
+		"getSelectedIndexes", // arr
+		"getSelectedLabel",
+		"getSelectedLabels", // arr
+		"getSelectedValue",
+		"getSelectedValues", // arr
+		"getSelectOptions", // arr
+		"getSpeed",
+		"getTable",
+		"getText",
+		"getTitle",
+		"getValue",
+		"getXpathCount",
+		"goBack",
+		"highlight", // loc
+		"isAlertPresent",
+		"isChecked",
+		"isConfirmationPresent",
+		"isCookiePresent",
+		"isEditable",
+		"isElementPresent",
+		"isOrdered",
+		"isSomethingSelected",
+		"isTextPresent",
+		"isVisible",
+		"keyDown",
+		"keyPress",
+		"keyUp",
+		"metaKeyDown",
+		"metaKeyUp",
+		"mouseOver",
+		"mouseOut",
+		"mouseDown",
+		"mouseDownAt",
+		"mouseMove",
+		"mouseMoveAt",
+		"mouseUp",
+		"mouseUpAt",
+		"open",
+		"openWindow",
+		"refresh",
+		"removeAllSelections",
+		"removeSelection", // loc
+		"runScript",
+		"select", // loc
+		"selectFrame",
+		"selectWindow",
+		"setBrowserLogLevel",
+		"setContext",
+		"setSpeed",
+		"setTimeout",
+		"shiftKeyDown",
+		"shiftKeyUp",
+		"submit", // loc
+		"type", // loc
+		"typeKeys", // loc
+		"uncheck", // loc
+		"useXpathLibrary",
+		"waitForCondition",
+		"waitForFrameToLoad",
+		"waitForPageToLoad",
+		"waitForPopUp",
+		"windowFocus",
+		"windowMaximize"
+***!
+!***> ARRAY_COMMANDS
+		"getAllButtons", // arr
+		"getAllFields", // arr
+		"getAllLinks", // arr
+		"getAllWindowTitles", // arr
+		"getAttributeFromAllWindows", // arr
+		"getSelectedIds", // arr 
+		"getSelectedIndexes", // arr
+		"getSelectedLabels", // arr
+		"getSelectedValues", // arr
+		"getSelectOptions" // arr
+***!

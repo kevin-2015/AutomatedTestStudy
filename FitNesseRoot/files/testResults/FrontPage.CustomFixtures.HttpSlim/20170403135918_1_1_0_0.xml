@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20161106</FitNesseVersion>
+  <rootPath>FrontPage.CustomFixtures.HttpSlim</rootPath>
+  <pageHistoryReference>
+    <name>FrontPage.CustomFixtures.HttpSlim.TestGetBaidu</name>
+    <date>2017-04-03T13:59:18+08:00</date>
+    <pageHistoryLink>FrontPage.CustomFixtures.HttpSlim.TestGetBaidu?pageHistory&amp;resultDate=20170403135918</pageHistoryLink>
+    <counts>
+      <right>2</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>1105</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>FrontPage.CustomFixtures.HttpSlim.TestPostV2transapi</name>
+    <date>2017-04-03T13:59:19+08:00</date>
+    <pageHistoryLink>FrontPage.CustomFixtures.HttpSlim.TestPostV2transapi?pageHistory&amp;resultDate=20170403135919</pageHistoryLink>
+    <counts>
+      <right>1</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>558</runTimeInMillis>
+  </pageHistoryReference>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>"D:\Program Files\jdk1.7.0_67\bin\java" -cp D:\AutomatedTestStudy\fitnesse-standalone.jar;FitNesseRoot/fitnesseJar/fitnesse-20161106.jar;D:\AutomatedTestStudy\FitNesseRoot\fitnesseJar\extlib\druid-1.0.26.jar;D:\AutomatedTestStudy\FitNesseRoot\fitnesseJar\extlib\fitnesse-features.jar;D:\AutomatedTestStudy\FitNesseRoot\fitnesseJar\extlib\jconsole-1.8.0.jar;D:\AutomatedTestStudy\FitNesseRoot\fitnesseJar\extlib\mysql-connector-java-5.1.39.jar;D:\AutomatedTestStudy\FitNesseRoot\fitnesseJar\extlib\okhttp-3.6.0.jar;D:\AutomatedTestStudy\FitNesseRoot\fitnesseJar\extlib\okio-1.11.0.jar;D:\AutomatedTestStudy\FitNesseRoot\fitnesseJar\extlib\tools-1.8.0.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>1</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>2077</totalRunTimeInMillis>
+</suiteResults>
+

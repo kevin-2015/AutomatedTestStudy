@@ -7,6 +7,10 @@ Also have a look at the pom.xml (or use it as parent pom). It contains a maven p
 !***> Preset variables
 !define TEST_SYSTEM {slim}
 !define BROWSER {firefox}
+!define FITNESSE_SUT_PORT {7000}
 
-!pomFile pom.xml@runtime
+
+
+!path FitNesseRoot/fitnesseJar/fitnesse-20161106.jar
+!path FitNesseRoot/fitnesseJar/xebiumlib/*.jar
 ***!
