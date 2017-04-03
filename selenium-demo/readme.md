@@ -91,6 +91,14 @@ Selenium Grid 2 还向后兼容 Selenium 1。您可以在 hub 中注册 Selenium
 java -jar selenium-server-standalone-2.9.0.jar -role rc -hub http://10.1.199.168:1234/grid/register -port 5557
 参考：https://github.com/SeleniumHQ/selenium/wiki/Grid2
 
+**7.集成jenkins
+
+安装插件Selenium Plugin：https://wiki.jenkins-ci.org/display/JENKINS/Selenium+Plugin
+该插件将您的Jenkins集群变成Selenium grid集群，以便您可以利用异构的Jenkins集群进行Selenium测试。 它现在具有真正指定每个节点的功能的配置，因此当节点以不兼容的功能启动时，它不会失败您的测试。
+
+安装插件seleniumhtmlreport Plugin:https://wiki.jenkins-ci.org/display/JENKINS/seleniumhtmlreport+Plugin
+可视化展示测试结果
+![报告结果](https://wiki.jenkins-ci.org/download/attachments/51544075/seleniumhtmlreport_overview.jpg?version=1&modificationDate=1295685514000&api=v2)
 
 #### 参考文档：
 
